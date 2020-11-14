@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Hello, [generic_user] ; welcome aboard!'' first issue'
+        pr-message: 'This is really cool : <a href>https://www.youtube.com/watch?v=GDC-7Z7ZmpE </a href>'' first pr'
